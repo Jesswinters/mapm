@@ -1,29 +1,42 @@
-# Node Skeleton
+# Mapm
+Mapm is a map making app that allows users to create and moderate curated lists of geographical data points. Think Wikipedia for maps.
 
-## Project Setup
+## Contributors
+[Jessica Winters](https://github.com/Jesswinters)  |
+[Kamylla Almeida](https://github.com/KamyllaAlmeida) |
+[Adam Romeo](https://github.com/arromeo)
 
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
+## Prerequisites
 
-## Getting Started
+- body-parser
+- cookie-session
+- dotenv
+- express
+- express-handlebars
+- knex
+- method-override
+- morgan
+- node-sass-middleware
+- pg
 
-1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information
-3. Install dependencies: `npm i`
-4. Fix to binaries for sass: `npm rebuild node-sass`
-5. Run migrations: `npm run knex migrate:latest`
-  - Check the migrations folder to see what gets created in the DB
-6. Run the seed: `npm run knex seed:run`
-  - Check the seeds file to see what gets seeded in the DB
-7. Run the server: `npm run local`
-8. Visit `http://localhost:8080/`
+This app requires Google Maps and Places API keys. The keys currently in the project are restricted and will not work on other hosts.
 
-## Dependencies
+## Demo
 
-- Node 5.10.x or above
-- NPM 3.8.x or above
+![demo video of mapm](https://github.com/jesswinters/mapm/blob/master/docs/mapm_demo.gif?raw=true)
+
+- Authorized users are able to make new maps and edit any current maps that exist on the server.
+- App name, title and image can be entered for displaying the map in lists.
+- To add a new point simply type the name or address of the location.
+- The map expands as new points are added.
+- To delete a point, find the point in the list and click 'Delete'.
+- The map will remove the point and redraw the new bounds.
+
+## Roadmap
+
+Mapm was a five day project, but we would like to expand on it when time permits. Some of the features we've considered implementing:
+
+1. Full login and authorization - Currently we have a dummy login system with only a couple pre-programmed users.
+2. Moderation system - Like Wikipedia, our app is open to editing by any registered user. To prevent abuse and misuse of the app, would require a moderation system.
+3. Map history - Goes hand-in-hand with moderation that changes to the map might need to be rolled back.
+4. Featured maps - If something is in the headlines, a relevant map on the front page would be useful.
